@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navigator</title>
+    <script>
+        const success = function(loc){                  //location 매개변수, 표현형     //아래 gCP 성공하며
+            console.log(loc.coords.latitude);                        //위도
+            console.log(loc.coords.longitude);                      //경도
+        }
+        const fail = function(msg){
+            console.log(msg.code);
+        }
+        //위에서 호출x 기능만 만들어둠
+        navigator.geolocation.getCurrentPosition(success, fail);     
+         //콜백함수 gCP함수 --> 위경도 가져올수 있는 환경이면 success객체, 불가능하면 fail 이름에따라 x 앞이 성공, 뒤가 실패
+    </script>
+</head>
+<body>
+    <h2>navigator</h2>
+</body>
+</html>

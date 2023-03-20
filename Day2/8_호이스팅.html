@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호이스팅</title>
+    <script>
+        func1();
+        func2();
+        function func1(){
+            alert('func1 호출되었음!');
+        }
+
+        //표현형은 호이스팅이 적용 x   표현형과  변수선언(let) 권장
+        const func2 = function(){
+            alert('func2 호출되었음!');
+        }
+
+        // func2();
+
+
+    </script>
+</head>
+<body>
+    <h2>호이스팅</h2>
+</body>
+</html>

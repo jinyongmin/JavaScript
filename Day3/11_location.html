@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location 객체</title>
+    <script>
+        // location.href = 'https://www.google.co.kr'; 바로 사용할시 페이지를 들어갔을 때 바로 구글 홈페이지로 이동함
+        console.log(`현재 문서의 URL 주소: ${location.href}`);
+        console.log(`현재 문서의 protocal: ${location.protocal}`);
+        console.log(`현재 문서의 hostname: ${location.hostname}`);
+        console.log(`현재 문서의 pathname: ${location.pathname}`);
+        
+        function sendit(){
+            location.href = 'https://www.google.co.kr'; //내 전체 경로 남의 사이트도 가능 ✅
+        }
+    </script>
+</head>
+<body>
+    <h2>location 객체</h2>
+    <p><button onclick="sendit()">이동</button></p>
+</body>
+</html>

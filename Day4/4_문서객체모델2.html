@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체모델 2</title>
+    <script>
+        window.onload = function(){  //윈도우가 다 노드 되었다면...~해줘를 받을 프로퍼티, window는 브라우저를 의미 html모두 읽음
+                const gnb = document.getElementById('gnb');
+                console.log(gnb);
+
+                console.log(gnb.parentNode);
+                console.log(gnb.children[0]); //gnb가 nav , 0번 -->ul안
+                console.log(gnb.children[0].nextElementSibling);  //null, indexing?? ->배열 데이터가 없을 때 undefined 그대로                                   적용; 객체가 없을때 undefined x, null!!!!!
+                console.log(gnb.children[0].children[0]);
+                console.log(gnb.children[0].firstChild);    // 웬만하면 사용x 빈공간의 텍스트가 나옴
+                console.log(gnb.children[0].firstElementChild);
+
+        }                          
+    </script>
+</head>
+<body>
+    <h2>문서객체모델 2</h2>
+    <div>
+        <nav id="gnb">
+            <ul><li class="first">내용1</li>
+                <li>내용2</li>
+                <li>내용3</li>
+            </ul>
+        </nav>
+    </div>
+
+</body>
+</html>

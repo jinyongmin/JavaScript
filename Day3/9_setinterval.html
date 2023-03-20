@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+    <script>
+        const hello = function(){
+            console.log('안녕하세요 Javascript!')
+        }
+        const si = setInterval(hello, 2000); //2초마다 hello 실행
+        const clearInter = function(){
+            clearInterval(si);//setInterval 중지
+            console.log('hello() 중지되었음!'); //중지됬을때 출력!
+        }
+    </script>
+</head>
+<body>
+    <h2>setInterval</h2>
+    <p><button onclick="clearInter()">중지</button></p>     
+    <!-- 버튼을 만들어서 중지시킴 -->
+</body>
+</html>
